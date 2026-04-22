@@ -10,12 +10,12 @@ export const president = {
 };
 
 export const aboutPreview =
-  "Basee a Tiaret, Nouaouria Export developpe une offre diversifiee qui rassemble materiaux de construction, finitions, equipements de travail, textile, batteries et solutions d'amenagement pour les marches professionnels.";
+  "Basee a Tiaret, Nouaouria Export developpe une offre diversifiee qui rassemble agroalimentaire, hygiene, construction, finitions, equipements de travail, textile, batteries et solutions d'amenagement pour les marches professionnels.";
 
 export const aboutParagraphs = [
   "Nouaouria Export est une entreprise de negoce et d'export basee a Tiaret, specialisee dans la mise en relation entre l'offre algerienne et les besoins concrets des acheteurs internationaux. Sous l'impulsion de Mr Nouaouria, la societe construit une gamme multi-secteurs capable de repondre a des commandes variees, regulieres et evolutives.",
-  "Notre force reside dans une selection pragmatique de familles de produits a forte demande: ciment et fournitures de construction, marbre et finitions, vetements d'ouvrier, batteries automobile, textile mode, chaussures, placo platre et panneaux bois. Chaque pole est pense pour servir aussi bien le commerce de gros que les projets d'approvisionnement terrain.",
-  "Depuis Tiaret, nous organisons la preparation commerciale, le conditionnement, la palettisation et la coordination logistique avec une approche orientee execution. L'objectif est simple: offrir a nos partenaires une base export souple, professionnelle et capable de consolider plusieurs univers produits dans une meme dynamique.",
+  "Notre force reside dans une selection pragmatique de familles de produits a forte demande: avicole, fruits et legumes, produits laitiers, boissons, epicerie, hygiene, mais aussi ciment, finitions, vetements d'ouvrier, batteries automobile, textile mode, chaussures, placo platre et panneaux bois. Chaque pole est pense pour servir aussi bien le commerce de gros que les projets d'approvisionnement terrain.",
+  "Depuis Tiaret, nous organisons la preparation commerciale, le conditionnement, la palettisation et la coordination logistique avec une approche orientee execution. L'objectif est simple: offrir a nos partenaires une base export souple, professionnelle et capable de consolider plusieurs univers produits, du alimentaire au non-alimentaire, dans une meme dynamique.",
 ];
 
 export const aboutGallery = [
@@ -47,6 +47,64 @@ export const aboutGallery = [
 ];
 
 export const excellencePoles = [
+  {
+    title: "Pole avicole & carne",
+    tag: "Avicole",
+    image: `${import.meta.env.BASE_URL}images/about/facility-poultry.jpeg`,
+    points: [
+      "Poulet de chair : volailles entieres ou decoupes de precision.",
+      "Oeufs de consommation : fraicheur garantie, mirage et calibrage aux normes.",
+      "Charcuterie : produits transformes certifies Halal (pates, saucissons, etc.).",
+    ],
+  },
+  {
+    title: "Pole frais : fruits & legumes",
+    tag: "Frais",
+    image: `${import.meta.env.BASE_URL}images/about/facility-vegetables.jpeg`,
+    points: [
+      "Primeurs : tomates, poivrons, pommes de terre.",
+      "Fruits : agrumes, dattes Deglet Nour de qualite superieure, grenades.",
+      "Conditionnement : emballages export garantissant la protection et l'aeration des produits.",
+    ],
+  },
+  {
+    title: "Pole produits laitiers",
+    tag: "Laitier",
+    image: "https://i.ibb.co/XrkbNm9b/Whats-App-Image-2026-04-19-at-13-55-48.jpg",
+    points: [
+      "Fromagerie : fromages fondus, pates pressees et specialites locales.",
+      "Lait & derives : lait UHT, yaourts et cremes dessert longue conservation.",
+    ],
+  },
+  {
+    title: "Pole boissons & jus",
+    tag: "Boissons",
+    image: "https://i.ibb.co/9Hr3Tj5R/Chat-GPT-Image-21-avr-2026-18-20-41.png",
+    points: [
+      "Jus de fruits : nectars et jus 100% naturels aux saveurs mediterraneennes.",
+      "Boissons gazeuses : gammes variees de sodas et eaux minerales.",
+    ],
+  },
+  {
+    title: "Pole biscuiterie & epicerie",
+    tag: "Epicerie",
+    image: "https://i.ibb.co/jxSGyq4/Chat-GPT-Image-21-avr-2026-18-17-17.png",
+    points: [
+      "Biscuiterie : gaufrettes, biscuits secs et fourres.",
+      "Confiserie : produits sucres adaptes aux gouts internationaux.",
+      "Epicerie seche : references de base pour la distribution et la revente.",
+    ],
+  },
+  {
+    title: "Pole detergents & hygiene",
+    tag: "Hygiene",
+    image: "https://i.ibb.co/Kz3VjSDW/Whats-App-Image-2026-04-19-at-13-51-41.jpg",
+    points: [
+      "Detergents : lessives liquides et poudres pour usage domestique et professionnel.",
+      "Produits menagers : nettoyants multi-usages, javel et solutions d'entretien.",
+      "Conditionnement export : formats adaptes a la distribution et aux commandes en volume.",
+    ],
+  },
   {
     title: "Pole ciment & construction",
     tag: "Construction",
@@ -152,8 +210,8 @@ export const exportCommitments = [
 ];
 
 export const tradeCapabilities = [
-  "Materiaux et construction : une base solide autour du ciment, des fournitures chantier et des references utiles au gros oeuvre. Cette offre permet de servir des professionnels qui recherchent des volumes stables et une lecture simple des produits.",
-  "Finitions et amenagement : marbre, faience, dalles, placo platre et panneaux bois composent un ensemble coherent pour les projets d'interieur, les revendeurs et les entreprises du batiment qui veulent combiner structure et finition.",
+  "Agroalimentaire et produits d'hygiene : avicole, fruits et legumes, laitiers, boissons, epicerie et detergents permettent de repondre a des besoins de distribution rapide, de commerce de gros et de circuits marchands deja etablis.",
+  "Materiaux et amenagement : ciment, finitions, marbre, faience, placo platre et panneaux bois composent une base solide pour les projets de construction, de renovation et de revente professionnelle.",
   "Equipement et distribution : vetements d'ouvrier, batteries automobile, chaussures et textile mode ouvrent la porte a des circuits commerciaux differents, du point de vente specialise a l'approvisionnement B2B multi-categories.",
 ];
 
@@ -187,7 +245,7 @@ export const companyHighlights = [
 ];
 
 export const statItems = [
-  { value: "6", label: "Poles d'excellence" },
+  { value: `${excellencePoles.length}`, label: "Poles d'excellence" },
   { value: "Tiaret", label: "Base operationnelle" },
   { value: "B2B", label: "Orientation commerciale" },
   { value: "Sur mesure", label: "Reponse produit" },

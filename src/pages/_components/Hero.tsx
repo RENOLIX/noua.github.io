@@ -49,7 +49,13 @@ export default function Hero() {
             className="mb-6 font-serif text-5xl leading-tight font-bold text-white md:text-7xl"
           >
             Nouaouria <br />
-            <span className="text-primary">Export</span> <br />
+            <span
+              className="text-primary"
+              style={{ WebkitTextStroke: "1px rgba(255,255,255,0.95)" }}
+            >
+              Export
+            </span>{" "}
+            <br />
             Multi-secteurs
           </motion.h1>
 
@@ -60,8 +66,9 @@ export default function Hero() {
             className="mb-10 max-w-xl text-lg leading-relaxed text-white/80 md:text-xl"
           >
             Depuis Tiaret, nous developpons une offre export complete autour de
-            la construction, des finitions, des equipements professionnels, du
-            textile, de la chaussure et des batteries automobile.
+            l&apos;agroalimentaire, de l&apos;hygiene, de la construction, des
+            finitions, des equipements professionnels, du textile, de la
+            chaussure et des batteries automobile.
           </motion.p>
 
           <motion.div

@@ -62,9 +62,9 @@ export default function Footer() {
                 </div>
               </div>
               <p className="text-sm leading-relaxed text-white/55">
-                Une base export multi-secteurs pour les besoins de la
-                construction, de l&apos;amenagement, de l&apos;equipement, de
-                l&apos;automobile et du textile.
+                Une base export multi-secteurs pour l&apos;agroalimentaire,
+                l&apos;hygiene, la construction, l&apos;amenagement,
+                l&apos;equipement, l&apos;automobile et le textile.
               </p>
               <a
                 href={locationUrl}

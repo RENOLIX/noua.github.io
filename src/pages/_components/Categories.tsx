@@ -47,9 +47,9 @@ export default function Categories() {
             Une offre export complete
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            Materiaux, finitions, workwear, automobile, mode et amenagement :
-            nous consolidons plusieurs univers produits dans une meme strategie
-            d&apos;exportation.
+            Agroalimentaire, hygiene, materiaux, finitions, workwear,
+            automobile, mode et amenagement : nous consolidons plusieurs
+            univers produits dans une meme strategie d&apos;exportation.
           </p>
           <div className="mx-auto mt-6 h-1 w-16 rounded-full bg-primary" />
         </motion.div>
