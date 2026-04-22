@@ -4,14 +4,10 @@ import { useRef } from "react";
 import { CheckCircle2, ArrowRight, BadgeCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import {
-  aboutGallery,
-  aboutPreview,
-  companyHighlights,
-  president,
-} from "@/lib/zores-content";
+import { useSiteContent } from "@/components/providers/language";
 
 export default function Intro() {
+  const { aboutGallery, aboutPreview, companyHighlights, intro, president } = useSiteContent();
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
@@ -25,22 +21,19 @@ export default function Intro() {
             transition={{ duration: 0.7 }}
           >
             <span className="mb-4 inline-block text-sm font-semibold uppercase tracking-widest text-primary">
-              A propos de nous
+              {intro.eyebrow}
             </span>
             <h2 className="mb-6 font-serif text-4xl leading-tight font-bold text-foreground md:text-5xl">
-              Votre partenaire <br />
-              <span className="text-primary">export multi-secteurs</span>
+              {intro.titleStart} <br />
+              <span className="text-primary">{intro.titleAccent}</span>
               <br />
-              depuis Tiaret
+              {intro.titleEnd}
             </h2>
             <p className="mb-5 text-lg leading-relaxed text-muted-foreground">
               {aboutPreview}
             </p>
             <p className="mb-8 leading-relaxed text-muted-foreground">
-              Sous l&apos;impulsion de {president.name}, nous structurons une
-              offre export lisible, serieuse et modulable pour les
-              distributeurs, importateurs, acheteurs projets et partenaires
-              internationaux.
+              {intro.additionalText}
             </p>
 
             <ul className="mb-8 space-y-3">
@@ -60,7 +53,7 @@ export default function Intro() {
 
             <Link to="/about">
               <Button className="h-auto cursor-pointer rounded-full bg-primary px-7 py-3 font-semibold text-white shadow-lg shadow-primary/30 hover:bg-primary/90">
-                Lire plus
+                {intro.button}
                 <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
@@ -120,8 +113,7 @@ export default function Intro() {
                     {president.title}
                   </div>
                   <p className="mt-2 text-[11px] leading-5 text-muted-foreground md:text-xs md:leading-6">
-                    Direction strategique de la societe et pilotage des
-                    operations commerciales multi-secteurs.
+                    {intro.cardDescription}
                   </p>
                 </div>
               </div>

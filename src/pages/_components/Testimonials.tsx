@@ -1,9 +1,10 @@
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef } from "react";
-import { exportCommitments } from "@/lib/zores-content";
+import { useSiteContent } from "@/components/providers/language";
 
 export default function Testimonials() {
+  const { exportCommitments, testimonials } = useSiteContent();
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
@@ -17,10 +18,10 @@ export default function Testimonials() {
           className="text-center mb-16"
         >
           <span className="inline-block text-primary font-semibold text-sm tracking-widest uppercase mb-3">
-            Engagements logistiques et commerciaux
+            {testimonials.eyebrow}
           </span>
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Une organisation au service de l&apos;export
+            {testimonials.heading}
           </h2>
           <div className="mt-6 w-16 h-1 bg-primary mx-auto rounded-full" />
         </motion.div>

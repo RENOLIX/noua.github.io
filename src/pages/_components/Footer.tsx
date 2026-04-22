@@ -3,22 +3,12 @@ import { useInView } from "motion/react";
 import { useRef } from "react";
 import { MapPin, Phone, Mail, UserRound, ChevronRight } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import {
-  contactItems,
-  excellencePoles,
-  locationUrl,
-} from "@/lib/zores-content";
-
-const companyLinks = [
-  { label: "Accueil", href: "#home" },
-  { label: "Nos Poles", href: "#products" },
-  { label: "Avantages", href: "#advantages" },
-  { label: "Contact", href: "#contact" },
-];
+import { useSiteContent } from "@/components/providers/language";
 
 const icons = [MapPin, UserRound, Phone, Mail];
 
 export default function Footer() {
+  const { contactItems, excellencePoles, footer, locationUrl, nav } = useSiteContent();
   const footerRef = useRef(null);
   const footerInView = useInView(footerRef, { once: true, margin: "-60px" });
   const location = useLocation();
@@ -57,14 +47,12 @@ export default function Footer() {
                     NOUAOURIA EXPORT
                   </div>
                   <div className="text-[10px] uppercase tracking-widest text-white/50">
-                    Export - Tiaret
+                    {nav.brandSubline}
                   </div>
                 </div>
               </div>
               <p className="text-sm leading-relaxed text-white/55">
-                Une base export multi-secteurs pour l&apos;agroalimentaire,
-                l&apos;hygiene, la construction, l&apos;amenagement,
-                l&apos;equipement, l&apos;automobile et le textile.
+                {footer.description}
               </p>
               <a
                 href={locationUrl}
@@ -73,13 +61,13 @@ export default function Footer() {
                 className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
               >
                 <MapPin className="h-4 w-4" />
-                Voir Nouaouria Export sur Google Maps
+                {footer.mapLink}
               </a>
             </div>
 
             <div>
               <h4 className="mb-5 text-sm font-semibold uppercase tracking-widest text-white">
-                Nos Poles
+                {footer.polesHeading}
               </h4>
               <ul className="space-y-2.5">
                 {excellencePoles.map((pole) => (
@@ -98,10 +86,10 @@ export default function Footer() {
 
             <div>
               <h4 className="mb-5 text-sm font-semibold uppercase tracking-widest text-white">
-                Entreprise
+                {footer.companyHeading}
               </h4>
               <ul className="space-y-2.5">
-                {companyLinks.map((link) => (
+                {footer.links.map((link) => (
                   <li key={link.label}>
                     <button
                       onClick={() => scrollTo(link.href)}
@@ -118,7 +106,7 @@ export default function Footer() {
                     className="group flex items-center gap-1.5 text-sm text-white/55 transition-colors hover:text-primary"
                   >
                     <ChevronRight className="h-3 w-3 text-primary/0 transition-colors group-hover:text-primary" />
-                    Lire plus
+                    {footer.readMore}
                   </Link>
                 </li>
               </ul>
@@ -126,7 +114,7 @@ export default function Footer() {
 
             <div>
               <h4 className="mb-5 text-sm font-semibold uppercase tracking-widest text-white">
-                Contact Commercial
+                {footer.contactHeading}
               </h4>
               <div className="space-y-3">
                 {contactItems.map((item, index) => {
@@ -171,17 +159,17 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 py-5 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-between gap-3 text-xs text-white/35 sm:flex-row">
           <span>
-            (c) {new Date().getFullYear()} Nouaouria Export. Tous droits reserves.
+            (c) {new Date().getFullYear()} {footer.copyrightSuffix}
           </span>
           <div className="flex items-center gap-5">
             <span className="cursor-pointer transition-colors hover:text-white/60">
-              Politique de confidentialite
+              {footer.legalPrivacy}
             </span>
             <span className="cursor-pointer transition-colors hover:text-white/60">
-              Mentions legales
+              {footer.legalNotice}
             </span>
             <span className="cursor-pointer transition-colors hover:text-white/60">
-              CGV
+              {footer.legalTerms}
             </span>
           </div>
         </div>

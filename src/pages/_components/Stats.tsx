@@ -1,9 +1,10 @@
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef } from "react";
-import { statItems } from "@/lib/zores-content";
+import { useSiteContent } from "@/components/providers/language";
 
 export default function Stats() {
+  const { statItems } = useSiteContent();
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 

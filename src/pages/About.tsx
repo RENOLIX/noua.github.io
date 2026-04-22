@@ -1,19 +1,22 @@
 import { BadgeCheck, MapPinned } from "lucide-react";
 import Navbar from "./_components/Navbar";
 import Footer from "./_components/Footer";
-import {
-  aboutGallery,
-  aboutParagraphs,
-  competitiveAdvantages,
-  contactEmail,
-  contactPhone,
-  exportCommitments,
-  locationUrl,
-  president,
-  tradeCapabilities,
-} from "@/lib/zores-content";
+import { useSiteContent } from "@/components/providers/language";
 
 export default function AboutPage() {
+  const {
+    aboutGallery,
+    aboutPage,
+    aboutParagraphs,
+    competitiveAdvantages,
+    contactEmail,
+    contactPhone,
+    exportCommitments,
+    locationUrl,
+    president,
+    tradeCapabilities,
+  } = useSiteContent();
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
@@ -24,10 +27,10 @@ export default function AboutPage() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="rounded-[2.25rem] border border-border bg-white/92 backdrop-blur p-8 md:p-12 shadow-[0_24px_80px_rgba(0,0,0,0.06)]">
               <span className="inline-flex rounded-full bg-primary/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-primary">
-                A propos
+                {aboutPage.eyebrow}
               </span>
               <h1 className="mt-5 max-w-4xl font-serif text-4xl md:text-6xl font-bold leading-tight">
-                Nouaouria Export, une base multi-secteurs au service de vos approvisionnements
+                {aboutPage.heading}
               </h1>
               <div className="mt-8 grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
                 <div className="space-y-5 text-lg leading-8 text-muted-foreground">
@@ -55,8 +58,12 @@ export default function AboutPage() {
                   </div>
 
                   <div className="mt-6 border-t border-border pt-5 text-sm text-foreground/80">
-                    <div>Tel : {contactPhone}</div>
-                    <div className="mt-2">Email : {contactEmail}</div>
+                    <div>
+                      {aboutPage.phoneLabel} : {contactPhone}
+                    </div>
+                    <div className="mt-2">
+                      {aboutPage.emailLabel} : {contactEmail}
+                    </div>
                     <a
                       href={locationUrl}
                       target="_blank"
@@ -64,7 +71,7 @@ export default function AboutPage() {
                       className="mt-4 inline-flex items-center gap-2 text-primary font-semibold hover:underline"
                     >
                       <MapPinned className="w-4 h-4" />
-                      Voir Nouaouria Export sur la carte
+                      {aboutPage.mapLink}
                     </a>
                   </div>
                 </div>
@@ -76,10 +83,10 @@ export default function AboutPage() {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
           <section className="mb-8 rounded-[1.9rem] border border-border bg-white p-8 shadow-sm">
             <span className="inline-block text-primary font-semibold text-sm tracking-widest uppercase mb-3">
-              Galerie de la societe
+              {aboutPage.galleryEyebrow}
             </span>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Nouaouria Export en images
+              {aboutPage.galleryHeading}
             </h2>
             <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
               {aboutGallery.map((image, index) => (
@@ -109,10 +116,10 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-8">
             <article className="rounded-[1.9rem] border border-border bg-white p-8 shadow-sm">
               <span className="inline-block text-primary font-semibold text-sm tracking-widest uppercase mb-3">
-                Nos capacites produit
+                {aboutPage.capabilitiesEyebrow}
               </span>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Une offre pensee pour les achats professionnels
+                {aboutPage.capabilitiesHeading}
               </h2>
               <div className="space-y-5 text-base leading-8 text-muted-foreground">
                 {tradeCapabilities.map((detail) => (
@@ -123,10 +130,10 @@ export default function AboutPage() {
 
             <article className="rounded-[1.9rem] border border-border bg-white p-8 shadow-sm">
               <span className="inline-block text-primary font-semibold text-sm tracking-widest uppercase mb-3">
-                Engagements
+                {aboutPage.commitmentsEyebrow}
               </span>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Logistique et execution
+                {aboutPage.commitmentsHeading}
               </h2>
               <div className="space-y-4">
                 {exportCommitments.map((item, index) => (
@@ -142,10 +149,10 @@ export default function AboutPage() {
 
           <section className="mt-8 rounded-[1.9rem] border border-border bg-white p-8 shadow-sm">
             <span className="inline-block text-primary font-semibold text-sm tracking-widest uppercase mb-3">
-              Avantages competitifs
+              {aboutPage.advantagesEyebrow}
             </span>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Ce qui fait notre difference
+              {aboutPage.advantagesHeading}
             </h2>
             <div className="grid md:grid-cols-3 gap-5">
               {competitiveAdvantages.map((item) => (

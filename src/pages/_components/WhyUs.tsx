@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef } from "react";
 import { ShieldCheck, Truck, PackageCheck, Globe, Leaf, Award } from "lucide-react";
-import { competitiveAdvantages } from "@/lib/zores-content";
+import { useSiteContent } from "@/components/providers/language";
 
 const icons = [ShieldCheck, Truck, PackageCheck, Globe, Leaf, Award];
 const styles = [
@@ -12,6 +12,7 @@ const styles = [
 ];
 
 export default function WhyUs() {
+  const { competitiveAdvantages, whyUs } = useSiteContent();
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
@@ -25,20 +26,16 @@ export default function WhyUs() {
             transition={{ duration: 0.7 }}
           >
             <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-primary">
-              Nos avantages competitifs
+              {whyUs.eyebrow}
             </span>
             <h2 className="mb-6 font-serif text-4xl font-bold text-foreground md:text-5xl">
-              Un partenaire fiable pour vos achats
+              {whyUs.heading}
             </h2>
             <p className="mb-6 text-lg leading-relaxed text-muted-foreground">
-              Basee a Tiaret, Nouaouria Export combine lecture commerciale,
-              coordination logistique et souplesse produit pour servir des
-              marches varies avec une execution claire.
+              {whyUs.paragraphOne}
             </p>
             <p className="mb-8 leading-relaxed text-muted-foreground">
-              Notre approche repose sur la consolidation multi-secteurs, la
-              preparation export et une relation B2B simple a piloter, meme
-              lorsque les besoins couvrent plusieurs familles de produits.
+              {whyUs.paragraphTwo}
             </p>
             <div className="flex items-center gap-4">
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary">
@@ -49,7 +46,7 @@ export default function WhyUs() {
                   Nouaouria Export
                 </div>
                 <div className="text-sm text-muted-foreground">
-                  Tiaret, Algerie - Export multi-secteurs
+                  {whyUs.brandTagline}
                 </div>
               </div>
             </div>

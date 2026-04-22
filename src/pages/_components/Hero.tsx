@@ -2,8 +2,10 @@ import { motion } from "motion/react";
 import { ArrowRight, MapPin, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { useSiteContent } from "@/components/providers/language";
 
 export default function Hero() {
+  const { hero } = useSiteContent();
   const heroImage = `${import.meta.env.BASE_URL}images/stock/hero-logistics.jpg`;
 
   const handleScroll = (href: string) => {
@@ -36,7 +38,7 @@ export default function Hero() {
           >
             <div className="flex items-center gap-1.5 rounded-full border border-primary/40 bg-primary/20 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-sm">
               <MapPin className="h-3 w-3 text-primary" />
-              Tiaret, Algerie
+              {hero.locationLabel}
             </div>
             <div className="flex items-center gap-1 text-xs font-semibold text-yellow-400">
               {Array.from({ length: 5 }).map((_, index) => (
@@ -53,7 +55,7 @@ export default function Hero() {
           >
             Nouaouria <br />
             <span className="text-primary">Export</span> <br />
-            Multi-secteurs
+            {hero.titleSuffix}
           </motion.h1>
 
           <motion.p
@@ -62,10 +64,7 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.45 }}
             className="mb-10 max-w-xl text-lg leading-relaxed text-white/80 md:text-xl"
           >
-            Depuis Tiaret, nous developpons une offre export complete autour de
-            l&apos;agroalimentaire, de l&apos;hygiene, de la construction, des
-            finitions, des equipements professionnels, du textile, de la
-            chaussure et des batteries automobile.
+            {hero.description}
           </motion.p>
 
           <motion.div
@@ -78,7 +77,7 @@ export default function Hero() {
               onClick={() => handleScroll("#products")}
               className="flex h-auto cursor-pointer items-center gap-2 rounded-full bg-primary px-8 py-4 text-base font-semibold text-white shadow-lg shadow-primary/40 hover:bg-primary/90"
             >
-              Decouvrir nos poles
+              {hero.primaryCta}
               <ArrowRight className="h-4 w-4" />
             </Button>
             <Link to="/about">
@@ -86,7 +85,7 @@ export default function Hero() {
                 variant="ghost"
                 className="h-auto cursor-pointer rounded-full border border-white/40 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm hover:bg-white/10"
               >
-                Lire plus
+                {hero.secondaryCta}
               </Button>
             </Link>
           </motion.div>
@@ -99,7 +98,7 @@ export default function Hero() {
         transition={{ delay: 1.2 }}
         className="absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2"
       >
-        <span className="text-xs uppercase tracking-widest text-white/50">Defiler</span>
+        <span className="text-xs uppercase tracking-widest text-white/50">{hero.scrollLabel}</span>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}

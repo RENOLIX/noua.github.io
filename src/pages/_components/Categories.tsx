@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { excellencePoles } from "@/lib/zores-content";
+import { useSiteContent } from "@/components/providers/language";
 
 const poleStyles = [
   { color: "from-rose-900/15 to-amber-500/8", border: "border-rose-200" },
@@ -14,6 +14,7 @@ const poleStyles = [
 ];
 
 export default function Categories() {
+  const { categories, excellencePoles } = useSiteContent();
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
   const location = useLocation();
@@ -41,15 +42,13 @@ export default function Categories() {
           className="mb-16 text-center"
         >
           <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-primary">
-            Nos {excellencePoles.length} poles d&apos;excellence
+            {categories.eyebrow}
           </span>
           <h2 className="mb-4 font-serif text-4xl font-bold text-foreground md:text-5xl">
-            Une offre export complete
+            {categories.heading}
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            Agroalimentaire, hygiene, materiaux, finitions, workwear,
-            automobile, mode et amenagement : nous consolidons plusieurs
-            univers produits dans une meme strategie d&apos;exportation.
+            {categories.description}
           </p>
           <div className="mx-auto mt-6 h-1 w-16 rounded-full bg-primary" />
         </motion.div>
@@ -113,11 +112,10 @@ export default function Categories() {
               <span className="text-2xl font-bold text-primary">+</span>
             </div>
             <h3 className="mb-2 font-serif text-lg font-bold text-foreground">
-              Vous voulez autre chose ?
+              {categories.moreTitle}
             </h3>
             <p className="text-sm text-muted-foreground">
-              Contactez-nous pour une demande sur mesure, un autre produit ou un
-              devis personnalise.
+              {categories.moreDescription}
             </p>
           </motion.button>
         </div>

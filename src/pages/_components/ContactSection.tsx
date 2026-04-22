@@ -5,14 +5,7 @@ import { Mail, MapPin, Phone, Send, UserRound } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  aboutGallery,
-  contactEmail,
-  contactItems,
-  contactPhone,
-  locationUrl,
-  president,
-} from "@/lib/zores-content";
+import { useSiteContent } from "@/components/providers/language";
 
 const WEB3FORMS_ACCESS_KEY = "73c26c5f-8baf-42cf-a918-37e6f690bf9c";
 
@@ -35,6 +28,15 @@ const initialForm: ContactFormState = {
 };
 
 export default function ContactSection() {
+  const {
+    aboutGallery,
+    contact,
+    contactEmail,
+    contactItems,
+    contactPhone,
+    locationUrl,
+    president,
+  } = useSiteContent();
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
   const [form, setForm] = useState<ContactFormState>(initialForm);
@@ -50,7 +52,7 @@ export default function ContactSection() {
     if (!form.name || !form.email || !form.message) {
       setFeedback({
         type: "error",
-        text: "Veuillez remplir les champs obligatoires avant l'envoi.",
+        text: contact.requiredError,
       });
       return;
     }
@@ -67,7 +69,7 @@ export default function ContactSection() {
         },
         body: JSON.stringify({
           access_key: WEB3FORMS_ACCESS_KEY,
-          subject: "Nouvelle demande commerciale - Nouaouria Export",
+          subject: contact.subject,
           from_name: form.name,
           botcheck: "",
           name: form.name,
@@ -84,12 +86,12 @@ export default function ContactSection() {
       };
 
       if (!response.ok || !result.success) {
-        throw new Error(result.message || "Envoi impossible pour le moment.");
+        throw new Error(result.message || contact.genericError);
       }
 
       setFeedback({
         type: "success",
-        text: "Demande envoyee avec succes. Nous revenons vers vous tres vite.",
+        text: contact.success,
       });
       setForm(initialForm);
     } catch (error) {
@@ -98,7 +100,7 @@ export default function ContactSection() {
         text:
           error instanceof Error
             ? error.message
-            : "Une erreur est survenue pendant l'envoi du message.",
+            : contact.genericError,
       });
     } finally {
       setSending(false);
@@ -118,15 +120,13 @@ export default function ContactSection() {
           className="mb-16 text-center"
         >
           <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-primary">
-            Contact commercial
+            {contact.eyebrow}
           </span>
           <h2 className="mb-4 font-serif text-4xl font-bold text-foreground md:text-5xl">
-            Vous voulez autre chose ? Contactez-nous
+            {contact.heading}
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            Vous cherchez un produit specifique, plusieurs familles dans une
-            meme commande ou un approvisionnement B2B sur mesure ? Envoyez-nous
-            votre demande et notre equipe commerciale vous repondra rapidement.
+            {contact.description}
           </p>
           <div className="mx-auto mt-6 h-1 w-16 rounded-full bg-primary" />
         </motion.div>
@@ -150,7 +150,7 @@ export default function ContactSection() {
 
             <div className="rounded-2xl border border-border bg-white p-5 shadow-sm">
               <div className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">
-                Direction generale
+                {contact.directorEyebrow}
               </div>
               <div className="mt-3 font-serif text-2xl font-bold text-foreground">
                 {president.name}
@@ -159,9 +159,7 @@ export default function ContactSection() {
                 {president.title}
               </div>
               <p className="mt-4 text-sm leading-7 text-muted-foreground">
-                Pour les demandes de partenariat, de distribution ou de
-                consolidation multi-produits, nous vous accompagnons de la
-                preparation jusqu&apos;a l&apos;expedition.
+                {contact.directorDescription}
               </p>
             </div>
 
@@ -217,10 +215,10 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <div className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
-                    Formulaire de demande
+                    {contact.formEyebrow}
                   </div>
                   <div className="font-serif text-2xl font-bold text-foreground">
-                    Parlez-nous de votre besoin
+                    {contact.formTitle}
                   </div>
                 </div>
               </div>
@@ -228,17 +226,17 @@ export default function ContactSection() {
               <div className="grid gap-4 sm:grid-cols-2">
                 <div>
                   <label className="mb-2 block text-xs font-semibold uppercase tracking-wide text-foreground">
-                    Nom complet *
+                    {contact.nameLabel}
                   </label>
                   <Input
-                    placeholder="Ahmed Benali"
+                    placeholder={contact.namePlaceholder}
                     value={form.name}
                     onChange={(event) => setForm({ ...form, name: event.target.value })}
                   />
                 </div>
                 <div>
                   <label className="mb-2 block text-xs font-semibold uppercase tracking-wide text-foreground">
-                    Email *
+                    {contact.emailLabel}
                   </label>
                   <Input
                     type="email"
@@ -252,17 +250,17 @@ export default function ContactSection() {
               <div className="grid gap-4 sm:grid-cols-2">
                 <div>
                   <label className="mb-2 block text-xs font-semibold uppercase tracking-wide text-foreground">
-                    Societe / Entreprise
+                    {contact.companyLabel}
                   </label>
                   <Input
-                    placeholder="Nom de votre entreprise"
+                    placeholder={contact.companyPlaceholder}
                     value={form.company}
                     onChange={(event) => setForm({ ...form, company: event.target.value })}
                   />
                 </div>
                 <div>
                   <label className="mb-2 block text-xs font-semibold uppercase tracking-wide text-foreground">
-                    Telephone / WhatsApp
+                    {contact.phoneLabel}
                   </label>
                   <Input
                     placeholder={contactPhone}
@@ -274,10 +272,10 @@ export default function ContactSection() {
 
               <div>
                 <label className="mb-2 block text-xs font-semibold uppercase tracking-wide text-foreground">
-                  Message *
+                  {contact.messageLabel}
                 </label>
                 <Textarea
-                  placeholder="Decrivez les produits souhaites, les volumes, la destination, le type de chantier ou tout autre besoin specifique..."
+                  placeholder={contact.messagePlaceholder}
                   className="min-h-[160px] resize-none"
                   value={form.message}
                   onChange={(event) => setForm({ ...form, message: event.target.value })}
@@ -289,7 +287,7 @@ export default function ContactSection() {
                 disabled={sending}
                 className="h-auto w-full cursor-pointer justify-center gap-2 rounded-xl bg-primary py-3 text-base font-semibold text-white shadow-lg shadow-primary/30 hover:bg-primary/90"
               >
-                {sending ? "Envoi en cours..." : "Envoyer la demande"}
+                {sending ? contact.submitting : contact.submit}
               </Button>
 
               {feedback ? (
