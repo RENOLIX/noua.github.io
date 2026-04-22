@@ -20,27 +20,27 @@ export const aboutParagraphs = [
 
 export const aboutGallery = [
   {
-    src: `${import.meta.env.BASE_URL}images/hero/export-hub.png`,
-    alt: "Hub logistique multi-secteurs de Nouaouria Export",
-    title: "Hub export multi-secteurs",
+    src: `${import.meta.env.BASE_URL}images/stock/hero-logistics.jpg`,
+    alt: "Conteneurs logistiques prets pour l'export",
+    title: "Logistique export et consolidation",
   },
   {
-    src: `${import.meta.env.BASE_URL}images/sectors/cement-construction.png`,
+    src: `${import.meta.env.BASE_URL}images/stock/cement-construction.jpg`,
     alt: "Materiaux de construction prepares pour l'export",
     title: "Construction et fournitures chantier",
   },
   {
-    src: `${import.meta.env.BASE_URL}images/sectors/marble-tiles.png`,
+    src: `${import.meta.env.BASE_URL}images/stock/marble-tiles.jpg`,
     alt: "Selection de marbre, faience et dalles",
     title: "Marbre, faience et dalles",
   },
   {
-    src: `${import.meta.env.BASE_URL}images/sectors/workwear.png`,
+    src: `${import.meta.env.BASE_URL}images/stock/workwear.jpg`,
     alt: "Gammes de vetements d'ouvrier et equipements terrain",
     title: "Vetements d'ouvrier",
   },
   {
-    src: `${import.meta.env.BASE_URL}images/sectors/drywall-wood.png`,
+    src: `${import.meta.env.BASE_URL}images/stock/drywall-wood.jpg`,
     alt: "Placo platre, panneaux et planches en bois",
     title: "Placo platre et planches en bois",
   },
@@ -50,7 +50,7 @@ export const excellencePoles = [
   {
     title: "Pole ciment & construction",
     tag: "Construction",
-    image: `${import.meta.env.BASE_URL}images/sectors/cement-construction.png`,
+    image: `${import.meta.env.BASE_URL}images/stock/cement-construction.jpg`,
     points: [
       "Ciment, sacs et references pour chantiers de gros oeuvre.",
       "Briques, acier et fournitures de base pour approvisionnement regulier.",
@@ -60,7 +60,7 @@ export const excellencePoles = [
   {
     title: "Pole marbre, faience & dalles",
     tag: "Finition",
-    image: `${import.meta.env.BASE_URL}images/sectors/marble-tiles.png`,
+    image: `${import.meta.env.BASE_URL}images/stock/marble-tiles.jpg`,
     points: [
       "Marbre decoratif et plaques pour projets residentiels et commerciaux.",
       "Faience murale et dalles de sol pour showrooms, chantiers et reseaux de distribution.",
@@ -70,7 +70,7 @@ export const excellencePoles = [
   {
     title: "Pole vetements d'ouvrier",
     tag: "Workwear",
-    image: `${import.meta.env.BASE_URL}images/sectors/workwear.png`,
+    image: `${import.meta.env.BASE_URL}images/stock/workwear.jpg`,
     points: [
       "Tenues de travail, gilets, vestes et ensembles pour usage intensif.",
       "Equipements visibles et pratiques pour ateliers, logistique et chantier.",
@@ -80,7 +80,7 @@ export const excellencePoles = [
   {
     title: "Pole batteries automobile",
     tag: "Auto",
-    image: `${import.meta.env.BASE_URL}images/sectors/car-batteries.png`,
+    image: `${import.meta.env.BASE_URL}images/stock/car-batteries.jpg`,
     points: [
       "Batteries de voiture pour usages quotidiens et professionnels.",
       "Solutions de demarrage et d'energie pour reseaux de pieces auto et garages.",
@@ -90,7 +90,7 @@ export const excellencePoles = [
   {
     title: "Pole chaussures & textile mode",
     tag: "Mode",
-    image: `${import.meta.env.BASE_URL}images/sectors/fashion-footwear.png`,
+    image: `${import.meta.env.BASE_URL}images/stock/fashion-footwear.jpg`,
     points: [
       "Chaussures et textile homme pour distribution et commerce detail.",
       "Collections femme, basics, accessoires et references saisonnieres.",
@@ -100,7 +100,7 @@ export const excellencePoles = [
   {
     title: "Pole placo platre & panneaux bois",
     tag: "Amenagement",
-    image: `${import.meta.env.BASE_URL}images/sectors/drywall-wood.png`,
+    image: `${import.meta.env.BASE_URL}images/stock/drywall-wood.jpg`,
     points: [
       "Placo platre pour cloisonnement, renovation et finition interieure.",
       "Panneaux, planches et supports bois pour ameublement et amenagement.",

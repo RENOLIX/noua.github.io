@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 export default function Hero() {
-  const heroImage = `${import.meta.env.BASE_URL}images/hero/export-hub.png`;
+  const heroImage = `${import.meta.env.BASE_URL}images/stock/hero-logistics.jpg`;
 
   const handleScroll = (href: string) => {
     const el = document.querySelector(href);
