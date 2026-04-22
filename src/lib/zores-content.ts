@@ -1,6 +1,6 @@
 export const locationUrl = "https://www.google.com/maps/search/?api=1&query=Tiaret%2C+Algerie";
-export const contactPhone = "+213670123442";
-export const contactEmail = "contact@nouaouria-export.com";
+export const contactPhone = "+213671037103";
+export const contactEmail = "nouaouriaexport@gmail.com";
 
 export const president = {
   name: "Mr Nouaouria",
