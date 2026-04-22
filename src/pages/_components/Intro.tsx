@@ -29,17 +29,18 @@ export default function Intro() {
             </span>
             <h2 className="mb-6 font-serif text-4xl leading-tight font-bold text-foreground md:text-5xl">
               Votre partenaire <br />
-              <span className="text-primary">export agroalimentaire</span>
+              <span className="text-primary">export multi-secteurs</span>
               <br />
-              depuis Alger
+              depuis Tiaret
             </h2>
             <p className="mb-5 text-lg leading-relaxed text-muted-foreground">
               {aboutPreview}
             </p>
             <p className="mb-8 leading-relaxed text-muted-foreground">
               Sous l&apos;impulsion de {president.name}, nous structurons une
-              offre export lisible, serieuse et competitive pour les
-              distributeurs, importateurs et partenaires internationaux.
+              offre export lisible, serieuse et modulable pour les
+              distributeurs, importateurs, acheteurs projets et partenaires
+              internationaux.
             </p>
 
             <ul className="mb-8 space-y-3">
@@ -113,8 +114,8 @@ export default function Intro() {
                     {president.title}
                   </div>
                   <p className="mt-2 text-[11px] leading-5 text-muted-foreground md:text-xs md:leading-6">
-                    Direction strategique de la societe et pilotage du
-                    developpement export.
+                    Direction strategique de la societe et pilotage des
+                    operations commerciales multi-secteurs.
                   </p>
                 </div>
               </div>

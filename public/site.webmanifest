@@ -1,18 +1,18 @@
 {
-  "name": "SARL Zores Export",
-  "short_name": "Zores Export",
-  "start_url": "/",
+  "name": "Nouaouria Export",
+  "short_name": "Nouaouria",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#1f8f54",
+  "theme_color": "#8a1d4c",
   "icons": [
     {
-      "src": "/favicon-512.png",
+      "src": "./nouaouria-icon.png",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "/apple-touch-icon.png",
+      "src": "./nouaouria-apple-touch.png",
       "sizes": "512x512",
       "type": "image/png"
     }

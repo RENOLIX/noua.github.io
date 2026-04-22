@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef } from "react";
-import { logisticCommitments } from "@/lib/zores-content";
+import { exportCommitments } from "@/lib/zores-content";
 
 export default function Testimonials() {
   const ref = useRef(null);
@@ -17,16 +17,16 @@ export default function Testimonials() {
           className="text-center mb-16"
         >
           <span className="inline-block text-primary font-semibold text-sm tracking-widest uppercase mb-3">
-            Engagements logistiques et sanitaires
+            Engagements logistiques et commerciaux
           </span>
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Une infrastructure au service de l&apos;export
+            Une organisation au service de l&apos;export
           </h2>
           <div className="mt-6 w-16 h-1 bg-primary mx-auto rounded-full" />
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {logisticCommitments.map((item, i) => (
+          {exportCommitments.map((item, i) => (
             <motion.div
               key={item.title}
               initial={{ opacity: 0, y: 30 }}

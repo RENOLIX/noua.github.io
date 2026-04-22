@@ -4,13 +4,13 @@ import Footer from "./_components/Footer";
 import {
   aboutGallery,
   aboutParagraphs,
-  avicoleDetails,
   competitiveAdvantages,
   contactEmail,
   contactPhone,
+  exportCommitments,
   locationUrl,
-  logisticCommitments,
   president,
+  tradeCapabilities,
 } from "@/lib/zores-content";
 
 export default function AboutPage() {
@@ -27,7 +27,7 @@ export default function AboutPage() {
                 A propos
               </span>
               <h1 className="mt-5 max-w-4xl font-serif text-4xl md:text-6xl font-bold leading-tight">
-                SARL Zores Export Algerie, l&apos;excellence agroalimentaire au service du monde
+                Nouaouria Export, une base multi-secteurs au service de vos approvisionnements
               </h1>
               <div className="mt-8 grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
                 <div className="space-y-5 text-lg leading-8 text-muted-foreground">
@@ -64,7 +64,7 @@ export default function AboutPage() {
                       className="mt-4 inline-flex items-center gap-2 text-primary font-semibold hover:underline"
                     >
                       <MapPinned className="w-4 h-4" />
-                      Voir SARL Zores Export Algerie sur la carte
+                      Voir Nouaouria Export sur la carte
                     </a>
                   </div>
                 </div>
@@ -79,7 +79,7 @@ export default function AboutPage() {
               Galerie de la societe
             </span>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
-              SARL Zores Export Algerie en images
+              Nouaouria Export en images
             </h2>
             <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
               {aboutGallery.map((image, index) => (
@@ -107,13 +107,13 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-8">
             <article className="rounded-[1.9rem] border border-border bg-white p-8 shadow-sm">
               <span className="inline-block text-primary font-semibold text-sm tracking-widest uppercase mb-3">
-                L&apos;Excellence Avicole
+                Nos capacites produit
               </span>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Une filiere structuree et exportable
+                Une offre pensee pour les achats professionnels
               </h2>
               <div className="space-y-5 text-base leading-8 text-muted-foreground">
-                {avicoleDetails.map((detail) => (
+                {tradeCapabilities.map((detail) => (
                   <p key={detail}>{detail}</p>
                 ))}
               </div>
@@ -124,10 +124,10 @@ export default function AboutPage() {
                 Engagements
               </span>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Logistique et sanitaire
+                Logistique et execution
               </h2>
               <div className="space-y-4">
-                {logisticCommitments.map((item, index) => (
+                {exportCommitments.map((item, index) => (
                   <div key={item.title} className="rounded-2xl bg-muted/50 border border-border p-5">
                     <div className="text-primary text-sm font-semibold mb-2">0{index + 1}</div>
                     <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>

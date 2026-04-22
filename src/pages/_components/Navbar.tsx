@@ -11,15 +11,12 @@ const links = [
   { label: "Contact", href: "#contact" },
 ];
 
-const originalLogoImage = "https://hercules-cdn.com/file_nJDzeXog7g8SI2gSgTrvmR7j";
-
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-  const fallbackLogoImage = `${import.meta.env.BASE_URL}images/brand/zores-logo.svg`;
-  const [logoImage, setLogoImage] = useState(originalLogoImage);
+  const logoImage = `${import.meta.env.BASE_URL}images/brand/nouaouria-logo.png`;
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 40);
@@ -61,8 +58,7 @@ export default function Navbar() {
             <Link to="/" className="flex items-center gap-2">
               <img
                 src={logoImage}
-                alt="Zores Export"
-                onError={() => setLogoImage(fallbackLogoImage)}
+                alt="Nouaouria Export"
                 className="h-12 w-auto object-contain"
               />
               <div className="mt-3 flex flex-col justify-center">
@@ -73,7 +69,7 @@ export default function Navbar() {
                       : "text-white"
                   }`}
                 >
-                  SARL ZORES
+                  NOUAOURIA
                 </span>
                 <span
                   className={`text-[9px] font-medium uppercase tracking-widest transition-colors ${
@@ -82,7 +78,7 @@ export default function Navbar() {
                       : "text-white/70"
                   }`}
                 >
-                  Export Algerie
+                  Export - Tiaret
                 </span>
               </div>
             </Link>

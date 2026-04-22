@@ -1,14 +1,10 @@
-import { useState } from "react";
 import { motion } from "motion/react";
 import { ArrowRight, MapPin, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
-const originalHeroImage = "https://hercules-cdn.com/file_k2YlHdE4nSKSLP9Dz7vEwN3J";
-
 export default function Hero() {
-  const fallbackHeroImage = `${import.meta.env.BASE_URL}images/about/facility-vegetables.jpeg`;
-  const [heroImage, setHeroImage] = useState(originalHeroImage);
+  const heroImage = `${import.meta.env.BASE_URL}images/hero/export-hub.png`;
 
   const handleScroll = (href: string) => {
     const el = document.querySelector(href);
@@ -21,9 +17,8 @@ export default function Hero() {
         src={heroImage}
         alt=""
         aria-hidden="true"
-        onError={() => setHeroImage(fallbackHeroImage)}
         className="absolute inset-0 h-full w-full object-cover"
-        style={{ objectPosition: "42% center" }}
+        style={{ objectPosition: "center center" }}
       />
       <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/50 to-black/20" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
@@ -38,7 +33,7 @@ export default function Hero() {
           >
             <div className="flex items-center gap-1.5 rounded-full border border-primary/40 bg-primary/20 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-sm">
               <MapPin className="h-3 w-3 text-primary" />
-              Alger, Algerie
+              Tiaret, Algerie
             </div>
             <div className="flex items-center gap-1 text-xs font-semibold text-yellow-400">
               {Array.from({ length: 5 }).map((_, index) => (
@@ -53,9 +48,9 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="mb-6 font-serif text-5xl leading-tight font-bold text-white md:text-7xl"
           >
-            L&apos;Excellence <br />
-            <span className="text-primary">Agroalimentaire</span> <br />
-            Algerienne
+            Nouaouria <br />
+            <span className="text-primary">Export</span> <br />
+            Multi-secteurs
           </motion.h1>
 
           <motion.p
@@ -64,9 +59,9 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.45 }}
             className="mb-10 max-w-xl text-lg leading-relaxed text-white/80 md:text-xl"
           >
-            SARL Zores Export Algerie, basee a Alger, developpe une offre
-            d&apos;export structuree autour de produits agroalimentaires de
-            premier choix pour les marches internationaux.
+            Depuis Tiaret, nous developpons une offre export complete autour de
+            la construction, des finitions, des equipements professionnels, du
+            textile, de la chaussure et des batteries automobile.
           </motion.p>
 
           <motion.div

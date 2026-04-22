@@ -1,151 +1,166 @@
-export const locationUrl = "https://maps.app.goo.gl/sTtUz9p5aL2R11C49";
+export const locationUrl = "https://www.google.com/maps/search/?api=1&query=Tiaret%2C+Algerie";
 export const contactPhone = "+213670123442";
-export const contactEmail = "contact@zores-export.com";
+export const contactEmail = "contact@nouaouria-export.com";
 
 export const president = {
-  name: "Mr LEBBIHI MOSTAPHA",
+  name: "Mr Nouaouria",
   title: "President Directeur General",
   summary:
-    "A la tete de la societe, Mr LEBBIHI MOSTAPHA porte la vision strategique de SARL Zores Export Algerie avec une ambition claire: structurer une offre agroalimentaire algerienne forte, fiable et competitive pour les marches internationaux.",
+    "A la tete de Nouaouria Export, Mr Nouaouria porte une vision claire: structurer depuis Tiaret une offre export multi-secteurs, serieuse, lisible et adaptable aux besoins des importateurs, distributeurs et partenaires B2B.",
 };
 
 export const aboutPreview =
-  "Basee a Alger sous la direction de Mr LEBBIHI MOSTAPHA, la SARL Zores Export est une entreprise d'exportation dynamique dediee a la promotion des richesses agroalimentaires de l'Algerie. Nous faisons le pont entre le savoir-faire des producteurs locaux et les exigences des marches internationaux.";
+  "Basee a Tiaret, Nouaouria Export developpe une offre diversifiee qui rassemble materiaux de construction, finitions, equipements de travail, textile, batteries et solutions d'amenagement pour les marches professionnels.";
 
 export const aboutParagraphs = [
-  "SARL Zores Export Algerie, basee au coeur de la capitale Alger, est une entreprise dynamique specialisee dans l'exportation de produits agroalimentaires de premier choix. Sous la conduite de Mr LEBBIHI MOSTAPHA, l'entreprise consolide une vision de croissance durable fondee sur la qualite, la rigueur et la confiance commerciale.",
-  "Ancree dans un terroir riche et diversifie, notre mission est de porter l'excellence de la production algerienne sur les marches internationaux. Nous selectionnons rigoureusement des produits alliant authenticite, saveurs uniques et conformite aux standards de qualite mondiaux.",
-  "Forts de notre situation strategique a Alger, nous maitrisons l'ensemble de la chaine logistique pour garantir la fraicheur et la tracabilite de nos marchandises, offrant ainsi a nos partenaires etrangers le meilleur du savoir-faire agricole algerien.",
+  "Nouaouria Export est une entreprise de negoce et d'export basee a Tiaret, specialisee dans la mise en relation entre l'offre algerienne et les besoins concrets des acheteurs internationaux. Sous l'impulsion de Mr Nouaouria, la societe construit une gamme multi-secteurs capable de repondre a des commandes variees, regulieres et evolutives.",
+  "Notre force reside dans une selection pragmatique de familles de produits a forte demande: ciment et fournitures de construction, marbre et finitions, vetements d'ouvrier, batteries automobile, textile mode, chaussures, placo platre et panneaux bois. Chaque pole est pense pour servir aussi bien le commerce de gros que les projets d'approvisionnement terrain.",
+  "Depuis Tiaret, nous organisons la preparation commerciale, le conditionnement, la palettisation et la coordination logistique avec une approche orientee execution. L'objectif est simple: offrir a nos partenaires une base export souple, professionnelle et capable de consolider plusieurs univers produits dans une meme dynamique.",
 ];
 
 export const aboutGallery = [
   {
-    src: `${import.meta.env.BASE_URL}images/about/facility-vegetables.jpeg`,
-    alt: "Plateforme de preparation des fruits et legumes",
-    title: "Preparation des fruits et legumes",
+    src: `${import.meta.env.BASE_URL}images/hero/export-hub.png`,
+    alt: "Hub logistique multi-secteurs de Nouaouria Export",
+    title: "Hub export multi-secteurs",
   },
   {
-    src: `${import.meta.env.BASE_URL}images/about/facility-packaging.jpeg`,
-    alt: "Ligne de conditionnement et de palettisation",
-    title: "Conditionnement et palettisation",
+    src: `${import.meta.env.BASE_URL}images/sectors/cement-construction.png`,
+    alt: "Materiaux de construction prepares pour l'export",
+    title: "Construction et fournitures chantier",
   },
   {
-    src: `${import.meta.env.BASE_URL}images/about/facility-eggs.jpeg`,
-    alt: "Unite de conditionnement des oeufs",
-    title: "Conditionnement des oeufs",
+    src: `${import.meta.env.BASE_URL}images/sectors/marble-tiles.png`,
+    alt: "Selection de marbre, faience et dalles",
+    title: "Marbre, faience et dalles",
   },
   {
-    src: `${import.meta.env.BASE_URL}images/about/fleet-logistics.jpeg`,
-    alt: "Parc logistique et flotte de transport",
-    title: "Parc logistique",
+    src: `${import.meta.env.BASE_URL}images/sectors/workwear.png`,
+    alt: "Gammes de vetements d'ouvrier et equipements terrain",
+    title: "Vetements d'ouvrier",
   },
   {
-    src: `${import.meta.env.BASE_URL}images/about/facility-poultry.jpeg`,
-    alt: "Quai de chargement du pole avicole",
-    title: "Pole avicole",
+    src: `${import.meta.env.BASE_URL}images/sectors/drywall-wood.png`,
+    alt: "Placo platre, panneaux et planches en bois",
+    title: "Placo platre et planches en bois",
   },
 ];
 
 export const excellencePoles = [
   {
-    title: "Pole avicole & carne",
-    tag: "Avicole",
-    image: `${import.meta.env.BASE_URL}images/about/facility-poultry.jpeg`,
+    title: "Pole ciment & construction",
+    tag: "Construction",
+    image: `${import.meta.env.BASE_URL}images/sectors/cement-construction.png`,
     points: [
-      "Poulet de chair : volailles entieres ou decoupes de precision.",
-      "Oeufs de consommation : fraicheur garantie, mirage et calibrage aux normes.",
-      "Charcuterie : produits transformes certifies Halal (pates, saucissons, etc.).",
+      "Ciment, sacs et references pour chantiers de gros oeuvre.",
+      "Briques, acier et fournitures de base pour approvisionnement regulier.",
+      "Conditionnement adapte aux commandes en lot, palette ou conteneur.",
     ],
   },
   {
-    title: "Pole frais : fruits & legumes",
-    tag: "Frais",
-    image: `${import.meta.env.BASE_URL}images/about/facility-vegetables.jpeg`,
+    title: "Pole marbre, faience & dalles",
+    tag: "Finition",
+    image: `${import.meta.env.BASE_URL}images/sectors/marble-tiles.png`,
     points: [
-      "Primeurs : tomates, poivrons, pommes de terre.",
-      "Fruits : agrumes, dattes Deglet Nour de qualite superieure, grenades.",
-      "Conditionnement : emballages export garantissant la protection et l'aeration des produits.",
+      "Marbre decoratif et plaques pour projets residentiels et commerciaux.",
+      "Faience murale et dalles de sol pour showrooms, chantiers et reseaux de distribution.",
+      "Gammes selectionnees selon l'esthetique, la resistance et le format demande.",
     ],
   },
   {
-    title: "Pole produits laitiers",
-    tag: "Laitier",
-    image: "https://i.ibb.co/XrkbNm9b/Whats-App-Image-2026-04-19-at-13-55-48.jpg",
+    title: "Pole vetements d'ouvrier",
+    tag: "Workwear",
+    image: `${import.meta.env.BASE_URL}images/sectors/workwear.png`,
     points: [
-      "Fromagerie : fromages fondus, pates pressees et specialites locales.",
-      "Lait & derives : lait UHT, yaourts et cremes dessert longue conservation.",
+      "Tenues de travail, gilets, vestes et ensembles pour usage intensif.",
+      "Equipements visibles et pratiques pour ateliers, logistique et chantier.",
+      "Approvisionnement adapte aux entreprises, revendeurs et donneurs d'ordre.",
     ],
   },
   {
-    title: "Pole boissons & jus",
-    tag: "Boissons",
-    image: "https://i.ibb.co/9Hr3Tj5R/Chat-GPT-Image-21-avr-2026-18-20-41.png",
+    title: "Pole batteries automobile",
+    tag: "Auto",
+    image: `${import.meta.env.BASE_URL}images/sectors/car-batteries.png`,
     points: [
-      "Jus de fruits : nectars et jus 100% naturels aux saveurs mediterraneennes.",
-      "Boissons gazeuses : gammes variees de sodas et eaux minerales algeriennes.",
+      "Batteries de voiture pour usages quotidiens et professionnels.",
+      "Solutions de demarrage et d'energie pour reseaux de pieces auto et garages.",
+      "Lots prepares pour grossistes, magasins specialises et distributeurs.",
     ],
   },
   {
-    title: "Pole biscuiterie & epicerie",
-    tag: "Epicerie",
-    image: "https://i.ibb.co/jxSGyq4/Chat-GPT-Image-21-avr-2026-18-17-17.png",
+    title: "Pole chaussures & textile mode",
+    tag: "Mode",
+    image: `${import.meta.env.BASE_URL}images/sectors/fashion-footwear.png`,
     points: [
-      "Biscuiterie : gaufrettes, biscuits secs et fourres.",
-      "Confiserie : produits sucres adaptes aux gouts internationaux.",
+      "Chaussures et textile homme pour distribution et commerce detail.",
+      "Collections femme, basics, accessoires et references saisonnieres.",
+      "Selection orientee volume, presentation retail et rotation commerciale.",
     ],
   },
   {
-    title: "Pole detergents & hygiene",
-    tag: "Hygiene",
-    image: "https://i.ibb.co/Kz3VjSDW/Whats-App-Image-2026-04-19-at-13-51-41.jpg",
+    title: "Pole placo platre & panneaux bois",
+    tag: "Amenagement",
+    image: `${import.meta.env.BASE_URL}images/sectors/drywall-wood.png`,
     points: [
-      "Detergents : lessives liquides et poudres pour usage domestique et professionnel.",
-      "Produits menagers : nettoyants multi-usages, javel et solutions d'entretien.",
-      "Conditionnement export : formats adaptes a la distribution et aux commandes en volume.",
+      "Placo platre pour cloisonnement, renovation et finition interieure.",
+      "Panneaux, planches et supports bois pour ameublement et amenagement.",
+      "Offre pensee pour les projets, les professionnels du batiment et la revente.",
     ],
   },
 ];
 
 export const competitiveAdvantages = [
   {
-    title: "Qualite certifiee",
-    text: "Respect rigoureux des normes HACCP et des protocoles veterinaires.",
+    title: "Offre multi-secteurs",
+    text: "Une meme structure commerciale pour sourcer plusieurs familles de produits dans un seul circuit.",
   },
   {
-    title: "Logistique integree",
-    text: "Situes a Alger, nous optimisons les flux maritimes et aeriens pour une reactivite maximale.",
+    title: "Selection pragmatique",
+    text: "Nous priorisons des references exportables, utiles au terrain et faciles a reapprovisionner.",
   },
   {
-    title: "Guichet unique",
-    text: "Un seul interlocuteur pour consolider vos conteneurs avec plusieurs types de produits (mix-loading).",
+    title: "Preparation export",
+    text: "Conditionnement, regroupement des lots et coordination documentaire avant expedition.",
+  },
+  {
+    title: "Souplesse commerciale",
+    text: "Possibilite d'adapter l'offre selon les volumes, la saison et le profil du client.",
+  },
+  {
+    title: "Pilotage logistique",
+    text: "Organisation des flux depuis Tiaret avec une vision claire des delais et des priorites.",
+  },
+  {
+    title: "Partenariat B2B",
+    text: "Approche orientee grossistes, importateurs, distributeurs et projets d'approvisionnement.",
   },
 ];
 
-export const logisticCommitments = [
+export const exportCommitments = [
   {
-    title: "La maitrise de la chaine de froid",
-    text: "Essentielle pour preserver la fraicheur de la volaille et de la charcuterie jusqu'a leur destination finale.",
+    title: "Consolidation multi-produits",
+    text: "Regrouper plusieurs poles dans une meme commande pour fluidifier les achats et simplifier l'expedition.",
   },
   {
-    title: "La conformite veterinaire",
-    text: "Chaque lot destine a l'exportation est soumis a des controles sanitaires rigoureux, incluant le depistage de salmonelles et le respect des protocoles de biosecurite.",
+    title: "Protection de la marchandise",
+    text: "Preparation adaptee a la nature de chaque produit avec emballage, separation et palettisation maitrisés.",
   },
   {
-    title: "Une distribution reactive",
-    text: "Vers les marches de proximite, le Golfe et l'Europe avec une organisation logistique maitrisee.",
+    title: "Suivi commercial reactif",
+    text: "Coordination continue entre la demande client, la preparation des lots et la mise en route logistique.",
   },
 ];
 
-export const avicoleDetails = [
-  "Poulet de chair : nous proposons des volailles issues d'elevages rigoureusement selectionnes pour leur croissance optimale et la qualite superieure de leur viande. Nos produits, qu'ils soient entiers ou decoupes, repondent aux exigences de la grande distribution et de la restauration internationale.",
-  "Oeufs de consommation : nous fournissons des oeufs frais de categorie superieure, conditionnes selon des normes d'hygiene strictes (mirage, calibrage et marquage) pour garantir une tracabilite totale.",
-  "Charcuterie fine : notre gamme de charcuterie allie tradition et modernite. Nous elaborons des produits transformes a partir de matieres premieres locales, certifiees Halal et conformes aux protocoles de securite alimentaire les plus exigeants.",
+export const tradeCapabilities = [
+  "Materiaux et construction : une base solide autour du ciment, des fournitures chantier et des references utiles au gros oeuvre. Cette offre permet de servir des professionnels qui recherchent des volumes stables et une lecture simple des produits.",
+  "Finitions et amenagement : marbre, faience, dalles, placo platre et panneaux bois composent un ensemble coherent pour les projets d'interieur, les revendeurs et les entreprises du batiment qui veulent combiner structure et finition.",
+  "Equipement et distribution : vetements d'ouvrier, batteries automobile, chaussures et textile mode ouvrent la porte a des circuits commerciaux differents, du point de vente specialise a l'approvisionnement B2B multi-categories.",
 ];
 
 export const contactItems = [
   {
     label: "Siege social",
-    value: "SARL Zores Export Algerie - Alger, Algerie",
+    value: "Nouaouria Export - Tiaret, Algerie",
     href: locationUrl,
   },
   {
@@ -165,15 +180,15 @@ export const contactItems = [
 ];
 
 export const companyHighlights = [
-  "Direction assuree par Mr LEBBIHI MOSTAPHA",
-  "Basee a Alger",
-  "Export agroalimentaire structure",
-  "Qualite certifiee et logistique integree",
+  "Direction assuree par Mr Nouaouria",
+  "Basee a Tiaret",
+  "Export multi-secteurs structure",
+  "Approche B2B souple et reactive",
 ];
 
 export const statItems = [
   { value: "6", label: "Poles d'excellence" },
-  { value: "HACCP", label: "Normes et protocoles" },
-  { value: "Alger", label: "Base logistique" },
-  { value: "24/7", label: "Suivi commercial" },
+  { value: "Tiaret", label: "Base operationnelle" },
+  { value: "B2B", label: "Orientation commerciale" },
+  { value: "Sur mesure", label: "Reponse produit" },
 ];

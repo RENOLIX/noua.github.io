@@ -67,7 +67,7 @@ export default function ContactSection() {
         },
         body: JSON.stringify({
           access_key: WEB3FORMS_ACCESS_KEY,
-          subject: "Nouvelle demande commerciale - SARL Zores Export",
+          subject: "Nouvelle demande commerciale - Nouaouria Export",
           from_name: form.name,
           botcheck: "",
           name: form.name,
@@ -124,9 +124,9 @@ export default function ContactSection() {
             Vous voulez autre chose ? Contactez-nous
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            Vous cherchez un produit specifique, un mix-loading ou une commande
-            sur mesure ? Envoyez-nous votre demande et notre equipe commerciale
-            vous repondra rapidement.
+            Vous cherchez un produit specifique, plusieurs familles dans une
+            meme commande ou un approvisionnement B2B sur mesure ? Envoyez-nous
+            votre demande et notre equipe commerciale vous repondra rapidement.
           </p>
           <div className="mx-auto mt-6 h-1 w-16 rounded-full bg-primary" />
         </motion.div>
@@ -158,7 +158,7 @@ export default function ContactSection() {
               </div>
               <p className="mt-4 text-sm leading-7 text-muted-foreground">
                 Pour les demandes de partenariat, de distribution ou de
-                consolidation export, notre equipe vous accompagne de la
+                consolidation multi-produits, nous vous accompagnons de la
                 preparation jusqu&apos;a l&apos;expedition.
               </p>
             </div>
@@ -275,7 +275,7 @@ export default function ContactSection() {
                   Message *
                 </label>
                 <Textarea
-                  placeholder="Decrivez les produits souhaites, les volumes, la destination ou tout autre besoin specifique..."
+                  placeholder="Decrivez les produits souhaites, les volumes, la destination, le type de chantier ou tout autre besoin specifique..."
                   className="min-h-[160px] resize-none"
                   value={form.message}
                   onChange={(event) => setForm({ ...form, message: event.target.value })}

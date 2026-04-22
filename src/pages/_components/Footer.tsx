@@ -23,6 +23,7 @@ export default function Footer() {
   const footerInView = useInView(footerRef, { once: true, margin: "-60px" });
   const location = useLocation();
   const navigate = useNavigate();
+  const logoImage = `${import.meta.env.BASE_URL}images/brand/nouaouria-logo.png`;
 
   const scrollTo = (href: string) => {
     if (location.pathname !== "/") {
@@ -46,18 +47,24 @@ export default function Footer() {
           >
             <div className="space-y-5 lg:col-span-1">
               <div className="flex items-center gap-2">
+                <img
+                  src={logoImage}
+                  alt="Nouaouria Export"
+                  className="h-11 w-auto object-contain"
+                />
                 <div>
                   <div className="font-serif text-lg font-bold leading-none text-white">
-                    SARL ZORES
+                    NOUAOURIA EXPORT
                   </div>
                   <div className="text-[10px] uppercase tracking-widest text-white/50">
-                    Export - Alger
+                    Export - Tiaret
                   </div>
                 </div>
               </div>
               <p className="text-sm leading-relaxed text-white/55">
-                L&apos;excellence de l&apos;agroalimentaire algerien au service
-                du monde, avec une offre structuree et une logistique maitrisee.
+                Une base export multi-secteurs pour les besoins de la
+                construction, de l&apos;amenagement, de l&apos;equipement, de
+                l&apos;automobile et du textile.
               </p>
               <a
                 href={locationUrl}
@@ -66,7 +73,7 @@ export default function Footer() {
                 className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
               >
                 <MapPin className="h-4 w-4" />
-                Voir SARL Zores Export Algerie sur Google Maps
+                Voir Nouaouria Export sur Google Maps
               </a>
             </div>
 
@@ -164,7 +171,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 py-5 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-between gap-3 text-xs text-white/35 sm:flex-row">
           <span>
-            (c) {new Date().getFullYear()} SARL Zores Export. Tous droits reserves.
+            (c) {new Date().getFullYear()} Nouaouria Export. Tous droits reserves.
           </span>
           <div className="flex items-center gap-5">
             <span className="cursor-pointer transition-colors hover:text-white/60">

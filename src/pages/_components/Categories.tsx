@@ -5,12 +5,12 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { excellencePoles } from "@/lib/zores-content";
 
 const poleStyles = [
-  { color: "from-green-500/20 to-green-600/5", border: "border-green-200" },
-  { color: "from-emerald-500/20 to-emerald-600/5", border: "border-emerald-200" },
-  { color: "from-sky-400/20 to-sky-500/5", border: "border-sky-200" },
-  { color: "from-orange-400/20 to-orange-500/5", border: "border-orange-200" },
-  { color: "from-amber-400/20 to-amber-500/5", border: "border-amber-200" },
-  { color: "from-blue-400/20 to-blue-500/5", border: "border-blue-200" },
+  { color: "from-rose-900/15 to-amber-500/8", border: "border-rose-200" },
+  { color: "from-stone-500/15 to-amber-400/10", border: "border-stone-200" },
+  { color: "from-slate-700/15 to-amber-500/8", border: "border-slate-200" },
+  { color: "from-zinc-700/15 to-rose-500/8", border: "border-zinc-200" },
+  { color: "from-orange-500/15 to-rose-500/8", border: "border-orange-200" },
+  { color: "from-amber-500/15 to-slate-500/8", border: "border-amber-200" },
 ];
 
 export default function Categories() {
@@ -47,8 +47,9 @@ export default function Categories() {
             Une offre export complete
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            De l&apos;avicole aux detergents, nous consolidons plusieurs
-            familles de produits dans une meme strategie d&apos;exportation.
+            Materiaux, finitions, workwear, automobile, mode et amenagement :
+            nous consolidons plusieurs univers produits dans une meme strategie
+            d&apos;exportation.
           </p>
           <div className="mx-auto mt-6 h-1 w-16 rounded-full bg-primary" />
         </motion.div>

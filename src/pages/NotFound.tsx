@@ -12,7 +12,7 @@ export default function NotFound() {
         </h1>
         <p className="mt-4 text-base text-muted-foreground md:text-lg">
           Revenez a l&apos;accueil pour decouvrir les produits et services de
-          SARL Zores Export.
+          Nouaouria Export.
         </p>
         <Link
           className="mt-8 inline-flex rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"

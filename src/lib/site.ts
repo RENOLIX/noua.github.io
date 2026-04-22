@@ -1,16 +1,15 @@
 export const siteConfig = {
-  brandName: "iFreedy",
-  logoUrl:
-    "https://i.ibb.co/nMN7s0zm/Whats-App-Image-2026-04-16-at-18-45-45.png",
-  locationUrl: "https://share.google/A13iUukS6ghnGd6VR",
-  addressLabel: "Amara, Rue Alioua Fodil, Cheraga 16014, Algerie",
-  phoneLabel: "023 36 15 50",
-  secondaryPhoneLabel: "0561 32 18 04",
-  emailLabel: "ifreedy@hotmail.com",
-  hoursLabel: "Samedi a Jeudi 08:30 - 18:00 | Vendredi ferme",
+  brandName: "Nouaouria Export",
+  logoUrl: `${import.meta.env.BASE_URL}images/brand/nouaouria-logo.png`,
+  locationUrl: "https://www.google.com/maps/search/?api=1&query=Tiaret%2C+Algerie",
+  addressLabel: "Tiaret, Algerie",
+  phoneLabel: "+213670123442",
+  secondaryPhoneLabel: "+213670123442",
+  emailLabel: "contact@nouaouria-export.com",
+  hoursLabel: "Support commercial sur demande",
   heroStats: [
-    { value: "45 min", label: "pour une reparation rapide" },
-    { value: "95%", label: "de recuperation sur stockage lisible" },
-    { value: "7 j/7", label: "prise en charge atelier" },
+    { value: "6", label: "poles export actifs" },
+    { value: "B2B", label: "orientation commerciale" },
+    { value: "Sur mesure", label: "reponse produit" },
   ],
 } as const;
