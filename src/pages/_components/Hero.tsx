@@ -17,6 +17,9 @@ export default function Hero() {
         src={heroImage}
         alt=""
         aria-hidden="true"
+        loading="eager"
+        fetchPriority="high"
+        decoding="async"
         className="absolute inset-0 h-full w-full object-cover"
         style={{ objectPosition: "center center" }}
       />
@@ -49,13 +52,7 @@ export default function Hero() {
             className="mb-6 font-serif text-5xl leading-tight font-bold text-white md:text-7xl"
           >
             Nouaouria <br />
-            <span
-              className="text-primary"
-              style={{ WebkitTextStroke: "1px rgba(255,255,255,0.95)" }}
-            >
-              Export
-            </span>{" "}
-            <br />
+            <span className="text-primary">Export</span> <br />
             Multi-secteurs
           </motion.h1>
 

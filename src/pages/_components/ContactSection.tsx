@@ -142,6 +142,8 @@ export default function ContactSection() {
               <img
                 src={aboutGallery[3].src}
                 alt={aboutGallery[3].alt}
+                loading="lazy"
+                decoding="async"
                 className="h-56 w-full object-cover"
               />
             </div>

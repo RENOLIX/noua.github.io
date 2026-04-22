@@ -93,6 +93,8 @@ export default function AboutPage() {
                     <img
                       src={image.src}
                       alt={image.alt}
+                      loading="lazy"
+                      decoding="async"
                       className="h-full w-full object-cover"
                     />
                   </div>

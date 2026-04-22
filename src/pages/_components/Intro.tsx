@@ -77,6 +77,8 @@ export default function Intro() {
                 <img
                   src={aboutGallery[0].src}
                   alt={aboutGallery[0].alt}
+                  loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-cover"
                 />
               </div>
@@ -84,6 +86,8 @@ export default function Intro() {
                 <img
                   src={aboutGallery[2].src}
                   alt={aboutGallery[2].alt}
+                  loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-cover"
                 />
               </div>
@@ -91,6 +95,8 @@ export default function Intro() {
                 <img
                   src={aboutGallery[4].src}
                   alt={aboutGallery[4].alt}
+                  loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-cover"
                 />
               </div>

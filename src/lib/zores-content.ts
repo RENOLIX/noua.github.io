@@ -50,7 +50,7 @@ export const excellencePoles = [
   {
     title: "Pole avicole & carne",
     tag: "Avicole",
-    image: `${import.meta.env.BASE_URL}images/about/facility-poultry.jpeg`,
+    image: `${import.meta.env.BASE_URL}images/stock/avicole-carne.jpg`,
     points: [
       "Poulet de chair : volailles entieres ou decoupes de precision.",
       "Oeufs de consommation : fraicheur garantie, mirage et calibrage aux normes.",
@@ -60,7 +60,7 @@ export const excellencePoles = [
   {
     title: "Pole frais : fruits & legumes",
     tag: "Frais",
-    image: `${import.meta.env.BASE_URL}images/about/facility-vegetables.jpeg`,
+    image: `${import.meta.env.BASE_URL}images/stock/fresh-fruits-vegetables.jpg`,
     points: [
       "Primeurs : tomates, poivrons, pommes de terre.",
       "Fruits : agrumes, dattes Deglet Nour de qualite superieure, grenades.",
@@ -70,7 +70,7 @@ export const excellencePoles = [
   {
     title: "Pole produits laitiers",
     tag: "Laitier",
-    image: "https://i.ibb.co/XrkbNm9b/Whats-App-Image-2026-04-19-at-13-55-48.jpg",
+    image: `${import.meta.env.BASE_URL}images/stock/dairy-products.jpg`,
     points: [
       "Fromagerie : fromages fondus, pates pressees et specialites locales.",
       "Lait & derives : lait UHT, yaourts et cremes dessert longue conservation.",
@@ -79,7 +79,7 @@ export const excellencePoles = [
   {
     title: "Pole boissons & jus",
     tag: "Boissons",
-    image: "https://i.ibb.co/9Hr3Tj5R/Chat-GPT-Image-21-avr-2026-18-20-41.png",
+    image: `${import.meta.env.BASE_URL}images/stock/beverages-juice.jpg`,
     points: [
       "Jus de fruits : nectars et jus 100% naturels aux saveurs mediterraneennes.",
       "Boissons gazeuses : gammes variees de sodas et eaux minerales.",
@@ -88,7 +88,7 @@ export const excellencePoles = [
   {
     title: "Pole biscuiterie & epicerie",
     tag: "Epicerie",
-    image: "https://i.ibb.co/jxSGyq4/Chat-GPT-Image-21-avr-2026-18-17-17.png",
+    image: `${import.meta.env.BASE_URL}images/stock/biscuits-grocery.jpg`,
     points: [
       "Biscuiterie : gaufrettes, biscuits secs et fourres.",
       "Confiserie : produits sucres adaptes aux gouts internationaux.",
@@ -98,7 +98,7 @@ export const excellencePoles = [
   {
     title: "Pole detergents & hygiene",
     tag: "Hygiene",
-    image: "https://i.ibb.co/Kz3VjSDW/Whats-App-Image-2026-04-19-at-13-51-41.jpg",
+    image: `${import.meta.env.BASE_URL}images/stock/detergents-hygiene.jpg`,
     points: [
       "Detergents : lessives liquides et poudres pour usage domestique et professionnel.",
       "Produits menagers : nettoyants multi-usages, javel et solutions d'entretien.",

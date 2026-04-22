@@ -70,6 +70,8 @@ export default function Categories() {
                   <img
                     src={pole.image}
                     alt={pole.title}
+                    loading="lazy"
+                    decoding="async"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute left-3 top-3">
