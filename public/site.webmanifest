@@ -1,7 +1,8 @@
 {
   "name": "Nouaouria Export",
   "short_name": "Nouaouria",
-  "start_url": "./",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#8a1d4c",
